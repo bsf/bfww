@@ -1,0 +1,48 @@
+﻿{
+    "success": true,
+    "metadata": [
+        {"modelId": "App.model.BDS_WH",		 		
+		 "model": {
+			fields: ['id', {name: 'name', type: 'string'}, {name: 'b52_kod'}],
+			proxy: {
+						type: 'rest',
+						appendId: false, 
+						noCache: false,
+						pageParam: undefined,
+						limitParam: undefined,
+						startParam: undefined,
+						api: {
+							read: 'http://195.138.83.174:1032/datasnap/rest/tservermethods1/getdata/bds_wh',
+							update: 'http://195.138.83.174:1032/datasnap/rest/tservermethods1/setdata/bds_wh'
+						},
+						reader: {
+							type: 'json',
+							root: 'result[0].data',
+							successProperty: 'success'
+						}
+					}
+		 },
+		 "store": {					
+					proxy: {
+						type: 'rest',
+						noCache: false,
+						pageParam: undefined,
+						limitParam: undefined,
+						startParam: undefined,
+						api: {
+							read: 'http://195.138.83.174:1032/datasnap/rest/tservermethods1/getdata/bds_wh',
+							update: 'data/updateUsers.json'
+						},
+						reader: {
+							type: 'json',
+							root: 'result[0].data',
+							successProperty: 'success'
+						},
+						writer: {
+							type: 'json'
+						}
+					}
+				}
+        }
+    ]
+}

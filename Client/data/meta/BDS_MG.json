@@ -1,0 +1,28 @@
+﻿{
+    "success": true,
+    "metadata": [
+        {"modelId": "App.model.BDS_MG",		 		
+		 "model": {
+			fields: ['id', {name: 'name', type: 'string'}]
+		 },
+		 "store": {					
+					proxy: {
+						type: 'rest',
+						noCache: false,
+						pageParam: undefined,
+						limitParam: undefined,
+						startParam: undefined,
+						api: {
+							read: 'http://195.138.83.174:1032/datasnap/rest/tservermethods1/getdata/bds_mg',
+							update: 'data/updateUsers.json'
+						},
+						reader: {
+							type: 'json',
+							root: 'result[0].data',
+							successProperty: 'success'
+						}
+					}
+				}
+        }
+    ]
+}

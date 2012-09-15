@@ -1,0 +1,11 @@
+﻿{
+    "success": true,
+    "activities": [
+        {"uri": "views.APP.About", "title": "Welcome", "grp": "Сервис", "cls": "views.APP.About"},	        
+		{"uri": "views.BDS_WH.List", "title": "Подразделения", "grp": "Продажи", "cls": "List", "model": "BDS_WH"},		
+		{"uri": "views.BDS_WH.Item", "title": "Подразделение",  "cls": "Item", "model": "BDS_WH"},				
+		{"uri": "views.BDS_MG.List", "title": "Маркетинговые группы", "grp": "Продажи", "cls": "List", "model": "BDS_MG"},
+		{"uri": "views.BDS_MG.Item", "title": "Маркетинговая группа", "cls": "Item", "model": "BDS_MG"}
+        
+    ]
+}

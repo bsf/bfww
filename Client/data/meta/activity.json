@@ -1,0 +1,23 @@
+﻿{
+    "success": true,
+    "metadata": [
+        {
+			"modelId": "App.model.Activity", 
+			"model": {fields: ['uri', 'title', 'grp', 'cls', 'store', 'model']},
+		 	"store": {
+				proxy: {
+						type: 'ajax',
+						api: {
+							read: 'data/activities.json'
+						},
+						reader: {
+							type: 'json',
+							root: 'activities',
+							successProperty: 'success'
+						}
+				}
+				
+			}
+        }
+    ]
+}
